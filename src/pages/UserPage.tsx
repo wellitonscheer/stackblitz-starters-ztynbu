@@ -5,6 +5,7 @@ export function UserPage() {
   const [movies, setMovies] = useState([]);
 
   async function handleLoadMovies() {
+    console.log('tentou');
     try {
       const data = await getDiscoverMovies();
       setMovies(data.results);
@@ -15,7 +16,6 @@ export function UserPage() {
   }
 
   useEffect(() => {
-    console.log('tentou');
     handleLoadMovies();
   }, []);
 

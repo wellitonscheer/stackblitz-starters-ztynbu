@@ -11,15 +11,12 @@ export interface FilmeProps {
 }
 
 export function Filme({ filme }: FilmeProps) {
-  console.log('filme');
-  console.log(filme);
-  console.log('filme');
   return (
     <>
-      <div>
+      <div className="filme">
         <img
           src={'https://image.tmdb.org/t/p/w154/' + filme.poster_path}
-          alt=""
+          alt="no image"
         />
         <div>{filme.original_title}</div>
       </div>

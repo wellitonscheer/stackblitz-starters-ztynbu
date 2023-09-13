@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Filme } from '../components/Filme';
 import { getDiscoverMovies } from '../services/moviedb';
 
 export function UserPage() {
@@ -27,7 +28,7 @@ export function UserPage() {
       <hr />
       <h2>Veja outros lancamentos</h2>
       {movies?.map((movie) => {
-        return <div>{movie.original_title}</div>;
+        return <Filme filme={movie} />;
       })}
     </>
   );

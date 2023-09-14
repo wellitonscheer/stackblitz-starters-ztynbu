@@ -27,9 +27,11 @@ export function UserPage() {
       <h2>Seus Favoritos</h2>
       <hr />
       <h2>Veja outros lancamentos</h2>
-      {movies?.map((movie) => {
-        return <Filme filme={movie} />;
-      })}
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr' }}>
+        {movies?.map((movie) => {
+          return <Filme filme={movie} />;
+        })}
+      </div>
     </>
   );
 }

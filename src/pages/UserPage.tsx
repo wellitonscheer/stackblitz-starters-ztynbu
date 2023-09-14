@@ -27,7 +27,13 @@ export function UserPage() {
       <h2>Seus Favoritos</h2>
       <hr />
       <h2>Veja outros lancamentos</h2>
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr' }}>
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr 1fr',
+          gap: '1rem',
+        }}
+      >
         {movies?.map((movie) => {
           return <Filme filme={movie} />;
         })}

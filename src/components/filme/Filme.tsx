@@ -12,6 +12,9 @@ export interface FilmeProps {
 }
 
 export function Filme({ filme }: FilmeProps) {
+  async function handleFavoritar() {
+    alert('Filme favoritado: ' + filme.original_title);
+  }
   return (
     <>
       <div className="filme">
@@ -20,7 +23,7 @@ export function Filme({ filme }: FilmeProps) {
           alt="no image"
         />
         <small>{filme.vote_average}</small>
-        <button>Favoritar</button>
+        <button onClick={handleFavoritar}>Favoritar</button>
         <div>
           <b> {filme.original_title}</b>
           {filme.release_date}

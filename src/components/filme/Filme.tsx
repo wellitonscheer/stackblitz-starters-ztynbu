@@ -20,7 +20,11 @@ export function Filme({ filme }: FilmeProps) {
           alt="no image"
         />
         <small>{filme.vote_average}</small>
-        <div>{filme.original_title}</div>
+        <button>Favoritar</button>
+        <div>
+          <b> {filme.original_title}</b>
+          {filme.release_date}
+        </div>
       </div>
     </>
   );
